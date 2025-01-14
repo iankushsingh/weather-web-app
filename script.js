@@ -1,44 +1,33 @@
-/* --------------- Weather Web App  --------------------- */
-let show = document.getElementById("show");
-let search = document.getElementById("search");
-let cityVal = document.getElementById("city");
+// Variable Identifier
+const userlocation = document.getElementById("userlocation"),
 
-//Make sure you have your own key.
-let key = "cefcd70f32405f5998871bb3dff62dba";
+// console.log(userlocation)
 
-let getWeather = () => {
-  let cityValue = cityVal.value;
-  if (cityValue.length == 0) {
-    show.innerHTML = `<h3 class="error">Please enter a city name</h3>`;
-  }
-  else {
-    let url = `https://api.openweathermap.org/data/2.5/weather?q=${cityValue}&appid=${key}&units=metric`;
-    cityVal.value = "";
-    fetch(url)
-      .then((resp) => resp.json())
-      .then((data) => {
-        show.innerHTML = `
-        <h2>${data.name}, ${data.sys.country}</h2>
-        <h4 class="weather">${data.weather[0].main}</h4>
-        <h4 class="desc">${data.weather[0].description}</h4>
-        <img src="https://openweathermap.org/img/w/${data.weather[0].icon}.png">
-        <h1>${data.main.temp} &#176;</h1>
-        <div class="temp_container">
-         <div>
-            <h4 class="title">min</h4>
-            <h4 class="temp">${data.main.temp_min}&#176;</h4>
-         </div>
-         <div>
-            <h4 class="title">max</h4>
-            <h4 class="temp">${data.main.temp_max}&#176;</h4>
-         </div>   
-        </div>
-        `;
-      })
-      .catch(() => {
-        show.innerHTML = `<h3 class="error">City not found</h3>`;
-      });
-  }
-};
-search.addEventListener("click", getWeather);
-window.addEventListener("load", getWeather);
+coverter=document.getElementById("converter"),
+weatherIcon=document.querySelector(".weatherIcon"),
+temperature = document.querySelector(".temperature"),
+feelsLike = document.querySelector(".feelsLike"),
+description = document.querySelector(".description"),
+date = document.querySelector(".date"),
+city = document.querySelector(".city"),
+
+HValue = document.getElementById("HValue"),
+WValue = document.getElementById("WValue"),
+SRValue = document.getElementById("SRValue"),
+SSValue = document.getElementById("SSValue"),
+CValue = document.getElementById("CValue"),
+UVValue = document.getElementById("UVValue"),
+PValue = document.getElementById("PValue");
+
+WEATHER_API_ENDPOINT="http://api.openweathermap.org/data/2.5/forecast?id=524901&appid=cefcd70f32405f5998871bb3dff62dba&q=";
+WEATHER_DATA_ENDPOINT=''
+
+Forecast = DocumentTimeline.querySelector(".Forecast");
+// Function Declaration
+function findUserLocation() {
+  fetch(WEATHER_API_ENDPOINT + "London")
+  .then((response) => response.json())
+  .then((data) => {
+    console.log(data);
+  });
+}
