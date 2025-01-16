@@ -6,32 +6,48 @@
   box-sizing: border-box;
 }
 
-body{
-  height: 100vh;
-
+::-webkit-scrollbar {
+  width: 5px;
 }
 
-.container{
+::-webkit-scrollbar-thumb {
+  background: #83838398;
+}
+
+body {
+  height: 100vh;
+}
+
+.container {
   display: flex;
   align-items: center;
-
 }
 
-.weather-input{
-  width: 40%;
+.weather-input {
+  width: 25%;
   position: fixed;
   inset: 0;
   background: #78c1f3;
   padding: 1rem 2.5rem;
 }
-.input-group{
+
+.weatherIcon {
+  background-position: 50% !important;
+  background-repeat: no-repeat !important;
+  background-size: contain !important;
+  display: block;
+  height: 25%;
+  margin: 2rem auto;
+}
+
+.input-group {
   position: relative;
   display: flex;
   align-items: center;
   margin: 2rem 0;
 }
 
-.input-group input{
+.input-group input {
   background-color: white;
   text-transform: capitalize;
   padding: 1rem;
@@ -42,16 +58,16 @@ body{
   border: none;
 }
 
-.input-group .converter{
+.input-group .converter {
   position: absolute;
   right: 45px;
   border: none;
   outline: none;
-  font-size: 18 px;
+  font-size: 18px; /* Corrected spacing */
   cursor: pointer;
 }
 
-.input-group .fa-search{
+.input-group .fa-search {
   position: absolute;
   right: 15px;
   color: #909090;
@@ -59,25 +75,53 @@ body{
   font-size: 22px;
 }
 
-.weather-output{
-  width: 60%;
+.weather-output {
+  width: 75%;
   position: fixed;
   inset: 0;
-  margin-left: 40%;
+  margin-left: 25%;
   padding: 2rem;
   background: white;
   overflow: auto;
 }
 
-.highlights{
+.weather-input.feelsLike,
+.weather-input.description,
+.weather-input.date,
+.weather-input.city {
+  padding: 10px 0;
+}
+
+.temperature {
+  font-size: 5rem; /* Corrected spacing */
+  text-align: center;
+  display: flex;
+  font-weight: 300;
+}
+
+.temperature span {
+  font-size: 2rem;
+  margin-top: 20px;
+}
+
+.Highlights {
   display: grid;
-  grid-template-columns: repeat(3,350px);
+  grid-template-columns: repeat(3, 350px);
   grid-auto-flow: row;
   row-gap: 1rem;
   column-gap: 10px;
 }
 
-.highlights div{
+.Forecast {
+  display: grid;
+  grid-template-columns: repeat(4, 260px);
+  grid-auto-flow: row;
+  row-gap: 1rem; /* Corrected spacing */
+  column-gap: 10px; /* Corrected spacing */
+}
+
+.Highlights div,
+.Forecast div {
   height: 200px;
   display: grid;
   align-items: center;
@@ -88,12 +132,28 @@ body{
   padding: 1rem;
 }
 
-.highlights i{
+.Highlights i {
   font-size: 45px;
 }
 
-.Sun span{
+.Sun span {
   align-items: center;
   display: flex;
   gap: 10px;
+}
+
+.forcast-desc {
+  color: lightgray;
+  font-size: 0.8rem;
+  text-align: center;
+  padding-bottom: 5px;
+  font-style: italic;
+}
+
+.description {
+  font-size: 25px;
+}
+
+.heading {
+  margin: 1rem 0;
 }
