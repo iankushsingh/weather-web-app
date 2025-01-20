@@ -15,3 +15,10 @@ The Weather Web App is a user-friendly application that provides real-time weath
 - JavaScript
 - [Weather API](https://openweathermap.org/api)
 - Git and GitHub for version control
+
+## Made by :
+- Aman Gupta : Role - Project Manager 
+- Aman Pandey : Game Developer ( Responisble for making Unique )
+- Ankush Singh Bhadauriya : Backend Developer
+- Anshika Dwivedi : Frontend Developer
+- Harshit Katiyar : Quality Assurance Tester
