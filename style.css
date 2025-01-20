@@ -1,99 +1,296 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+
 * {
-  margin: 0px;
-  padding: 0px;
-  font-family: "Poppins";
-  box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    font-family: "Poppins";
+    box-sizing: border-box;
 }
 
-body{
-  height: 100vh;
+::-webkit-scrollbar {
+    width: 5px;
+
+}
+::-webkit-scrollbar-thumb {
+    background: #83838398;
+}
+
+body {
+    height: 100vh;
+    background-color:auto;
+    overflow: hidden;
+}
+
+.container {
+    display: flex;
+    align-items: center;
 
 }
 
-.container{
-  display: flex;
-  align-items: center;
-
+.weather-input {
+    width:25%;
+    position: fixed;
+    inset: 0;
+    background: #ADD8E6;
+    padding: 1rem 2.5rem;
 }
 
-.weather-input{
-  width: 40%;
-  position: fixed;
-  inset: 0;
-  background: #78c1f3;
-  padding: 1rem 2.5rem;
+.weatherIcon {
+    background-position: 50% !important;
+    background-repeat: no-repeat !important;
+    background-size: contain !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 40%;
+    margin: auto;
 }
-.input-group{
-  position: relative;
-  display: flex;
-  align-items: center;
-  margin: 2rem 0;
+.weatherIcon .icon-img{
+    width:20vw;
 }
-
-.input-group input{
-  background-color: white;
-  text-transform: capitalize;
-  padding: 1rem;
-  font-size: 15px;
-  border-radius: 6px;
-  width: 100%;
-  outline: none;
-  border: none;
+.temperature{
+    font-size:35px;
 }
-
-.input-group .converter{
-  position: absolute;
-  right: 45px;
-  border: none;
-  outline: none;
-  font-size: 18 px;
-  cursor: pointer;
+.input-group {
+    width:20vw;
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin: 2rem 0;
 }
 
-.input-group .fa-search{
-  position: absolute;
-  right: 15px;
-  color: #909090;
-  cursor: pointer;
-  font-size: 22px;
+.input-group input {
+    background-color: white;
+    text-transform: capitalize;
+    padding: 1rem;
+    font-size: 15px;
+    border-radius: 6px;
+    width: 100%;
+    outline: none;
+    border: none;
+}
+.button-container{
+    text-align: center;
+}
+#Celsius{
+    display: inline-block;
+    padding:10px 20px;
+    border-radius: 50% 0 0 50%;
+    background-color: lightgreen;
+    border:none;
+    transition-duration:0.5s;
+}
+#Fahrenheit{
+    display: inline-block;
+    padding:10px 20px;
+    border-radius: 0 50% 50% 0;
+    background-color: white;
+    border:none;
+    margin-left: -2.1%;
+    transition-duration:0.5s;
+}
+.input-group .fa-search {
+    position: absolute;
+    right: 15px;
+    color: #909090;
+    cursor: pointer;
+    font-size: 22px;
 }
 
-.weather-output{
-  width: 60%;
-  position: fixed;
-  inset: 0;
-  margin-left: 40%;
-  padding: 2rem;
-  background: white;
-  overflow: auto;
+.weather-output {
+    width: 75%;
+    position: fixed;
+    inset: 0;
+    margin-left: 25%;
+    padding: 2rem;
+    background: white;
+    overflow: hidden;
+    overflow-y: scroll;
 }
 
-.highlights{
-  display: grid;
-  grid-template-columns: repeat(3,350px);
-  grid-auto-flow: row;
-  row-gap: 1rem;
-  column-gap: 10px;
+
+.weather-input.feelsLike,
+.weather-input.description,
+.weather-input.date,
+.weather-input.city {
+    padding: 10px 0;
 }
 
-.highlights div{
-  height: 200px;
-  display: grid;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  background-color: lightblue;
-  border-radius: 20px;
-  padding: 1rem;
+.temperature {
+    font-size: 5 rem;
+    text-align: center;
+    display: flex;
+    font-weight: 300;
 }
 
-.highlights i{
-  font-size: 45px;
+.temperature span {
+    font-size: 2rem;
+    margin-top: 20px;
 }
 
-.Sun span{
-  align-items: center;
-  display: flex;
-  gap: 10px;
+.Highlights {
+   
+   display:grid;
+   grid-template-columns:repeat(3,350px);
+   grid-template-rows: repeat(3,200px);
+   grid-auto-flow: row;
+   row-gap: 1rem;
+   column-gap: 10px;
 }
+.Highlights div{
+    
+    background-color:lightblue;
+    border-radius: 20px;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    font-size: 24px;
+    /*
+    display: flex;
+    flex-direction: column;
+    align-items: space-between;
+    justify-content: space-between;
+    text-align: center;
+    background-color: lightblue;
+    border-radius: 20px;
+    padding: 1rem;
+    font-weight: bold;
+    font-size: 27px;*/
+}
+.Highlights div h1,span{
+    font-size:25px;
+    font-weight: 400;
+}
+.Highlights i {
+    font-size: 45px;
+}
+
+.Sun span {
+    align-items: center;
+    display: flex;
+    gap: 10px;
+}
+.description {
+    font-size: 25px;
+    text-align: center;
+}
+.description .cont{
+  font-size:35px;
+}
+.heading {
+   margin: 1rem 0;
+}
+.Forcast{
+   width:100vw;
+   display:grid;
+   grid-template-columns:repeat(3,350px);
+   grid-template-rows: repeat(3,1fr);
+   grid-auto-flow: row;
+   row-gap: 1rem;
+   column-gap: 10px;
+}
+.Forcast > div{
+    background-color:lightblue;
+    border-radius: 20px;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    font-size: 24px;
+}
+.Forcast .this-date{
+    font-weight: bold;
+}
+.Forcast .this-des{
+    color:#61636D;
+}
+.Forcast .this-temp{
+    font-weight:900;
+}
+/*to start style dark mode and light mode button*/
+.toggle-container {
+    text-align: right;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+.switch input {
+    display: none;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #CCCCCC;
+    transition: 0.4s;
+    border-radius: 34px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: 0.4s;
+    border-radius: 50%;
+}
+
+input:checked+.slider {
+    background-color:#1A2938;
+}
+
+input:checked+.slider:before {
+    transform: translateX(26px);
+}
+
+p {
+    margin-top: 10px;
+    font-size: 1.2rem;
+}
+#status{
+    font-weight: bolder;
+}
+/*to end the styling dark mode and light mode button*/
+/*
+
+                <div class="d1">
+                    <div class="this-date">
+                        Wednesday, April 3
+                    </div>
+                    <img src="https://openweathermap.org/img/wn/10d@2x.png" alt="img">
+                    <div class="this-des">
+                        feels cloudy 
+                    </div>
+                    <div class="this-temp">
+                        32 °C  / 22 °C
+                    </div>
+                </div>
+                <div class="d1">
+                    <div class="this-date">
+                        Wednesday, April 3
+                    </div>
+                    <img src="https://openweathermap.org/img/wn/10d@2x.png" alt="img">
+                    <div class="this-des">
+                        feels cloudy 
+                    </div>
+                    <div class="this-temp">
+                        32 °C  / 22 °C
+                    </div>
+                </div>
+
+*/
