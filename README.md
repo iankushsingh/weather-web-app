@@ -9,9 +9,10 @@ A simple weather application that allows users to check the current weather cond
 - [Technologies Used](#technologies-used)
 - [Getting Started](#getting-started)
 - [How to Use](#how-to-use)
+- [Contribution](#contribution)
 - [API Key](#api-key)
 - [License](#license)
-- [Contribution](#contribution)
+
 
 ## Demo
 
@@ -58,6 +59,15 @@ To get a copy of this project up and running on your local machine, follow these
 2. Enter the desired location in the search bar.
 3. Click the "Search" button to retrieve and display the weather information.
 
+## Contribution
+
+- Aman Gupta : Role - Project Manager 
+- Aman Pandey : Game Developer ( Responisble for making Unique )
+- Ankush Singh Bhadauriya : Backend Developer
+- Anshika Dwivedi : Frontend Developer
+- Harshit Katiyar : Quality Assurance Tester
+
+
 ## API Key
 
 This project uses a weather API to fetch real-time weather data. To use the API, you need to obtain an API key by signing up on the API provider's website.
@@ -70,10 +80,3 @@ const apiKey = 'cefcd70f32405f5998871bb3dff62dba';
 
 export default apiKey;
 
-## Contribution
-
-- Aman Gupta : Role - Project Manager 
-- Aman Pandey : Game Developer ( Responisble for making Unique )
-- Ankush Singh Bhadauriya : Backend Developer
-- Anshika Dwivedi : Frontend Developer
-- Harshit Katiyar : Quality Assurance Tester
